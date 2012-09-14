@@ -18,12 +18,14 @@ namespace Max_Keebler_s_Big_Move
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Texture2D playerTexture, platformTexture;
+        Texture2D playerTexture, platformTexture, bulletTexture;
         public int canvasHeight, canvasWidth;
         KeyboardState keyboard = Keyboard.GetState();
+        KeyboardState oldState;
         Player player;
         Platform myPlatform;
         List<Platform> Platforms;
+        List<Bullet> Bullets;
 
         public Game1()
         {
@@ -44,6 +46,7 @@ namespace Max_Keebler_s_Big_Move
             canvasWidth = graphics.GraphicsDevice.Viewport.Width;
             player = new Player(new Vector2(canvasWidth / 4, canvasHeight-80), this);
             Platforms = new List<Platform>();
+            Bullets = new List<Bullet>();
             for (int i = 0; i < 5; i++)
             {
                 Platform platform = new Platform((i * (canvasWidth / 3)), (canvasHeight - 20));
@@ -62,6 +65,7 @@ namespace Max_Keebler_s_Big_Move
             spriteBatch = new SpriteBatch(GraphicsDevice);
             playerTexture = Content.Load<Texture2D>(@"Player");
             platformTexture = Content.Load<Texture2D>(@"Platform1");
+            bulletTexture = Content.Load<Texture2D>(@"bullet");
         }
 
         /// <summary>
@@ -85,6 +89,28 @@ namespace Max_Keebler_s_Big_Move
                 this.Exit();
             keyboard = Keyboard.GetState();
             player.Update(gameTime, keyboard);
+
+            if(keyboard.IsKeyDown(Keys.X))
+            {
+                if (!oldState.IsKeyDown(Keys.X))
+                {
+                    Bullet newBullet = new Bullet(player);
+                    Bullets.Add(newBullet);
+                }
+            }
+            List<Bullet> removeBullets = new List<Bullet>();
+            foreach(Bullet curBullet in Bullets)
+            {
+                curBullet.Update();
+                if (curBullet.position.X > canvasWidth)
+                {
+                    removeBullets.Add(curBullet);
+                }
+            }
+            foreach (Bullet remove in removeBullets)
+            {
+                Bullets.Remove(remove);
+            }
             foreach(Platform myPlatform in Platforms)
             {
                 myPlatform.Update();
@@ -120,9 +146,12 @@ namespace Max_Keebler_s_Big_Move
                 }    
                 else if(myPlatform.outOfBounds())
                 {
+                    Random rand = new Random();
                     myPlatform.position.X = canvasWidth;
+                    myPlatform.position.Y = rand.Next(canvasHeight-200, canvasHeight-10);
                 }
             }
+            oldState = keyboard;
 
             base.Update(gameTime);
         }
@@ -137,6 +166,10 @@ namespace Max_Keebler_s_Big_Move
 
             spriteBatch.Begin();
             spriteBatch.Draw(playerTexture, player.playerPos, Color.White);
+            foreach (Bullet bullet in Bullets)
+            {
+                spriteBatch.Draw(bulletTexture, bullet.position, Color.White);
+            }
             foreach (Platform platform in Platforms)
             {
                 spriteBatch.Draw(platformTexture, platform.position, Color.White);

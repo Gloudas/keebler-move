@@ -6,3 +6,11 @@ c:\users\gloudas\documents\visual studio 2010\Projects\Max Keebler's Big Move\Ma
 c:\users\gloudas\documents\visual studio 2010\Projects\Max Keebler's Big Move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\Max Keebler's Big Move.exe
 c:\users\gloudas\documents\visual studio 2010\Projects\Max Keebler's Big Move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\Max Keebler's Big Move.pdb
 c:\users\gloudas\documents\visual studio 2010\Projects\Max Keebler's Big Move\Max Keebler's Big Move\Max Keebler's Big Move\bin\x86\Debug\Content\Platform1.xnb
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\bin\x86\Debug\Content\Player.xnb
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\bin\x86\Debug\Content\Platform1.xnb
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\bin\x86\Debug\Max Keebler's Big Move.exe
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\bin\x86\Debug\Max Keebler's Big Move.pdb
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\Max Keebler's Big Move.exe
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big Move\obj\x86\Debug\Max Keebler's Big Move.pdb

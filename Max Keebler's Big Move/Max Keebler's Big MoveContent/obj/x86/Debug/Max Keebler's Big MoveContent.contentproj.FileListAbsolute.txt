@@ -1,1 +1,2 @@
 c:\users\gloudas\documents\visual studio 2010\Projects\Max Keebler's Big Move\Max Keebler's Big Move\Max Keebler's Big MoveContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\bjrafeld\Documents\GitHub\keebler-move\Max Keebler's Big Move\Max Keebler's Big MoveContent\obj\x86\Debug\ResolveAssemblyReference.cache
